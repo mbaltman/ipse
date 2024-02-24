@@ -11,13 +11,16 @@
 		4600886D2B8A51EC008E644A /* TextLabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600886C2B8A51EC008E644A /* TextLabelButton.swift */; };
 		4600886F2B8A5368008E644A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600886E2B8A5368008E644A /* Constants.swift */; };
 		4600887B2B8A5BD2008E644A /* ReadexPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 460088792B8A5BBF008E644A /* ReadexPro.ttf */; };
-		46B316752B8A67A2004D7715 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316742B8A67A2004D7715 /* NavigationViewModel.swift */; };
 		46B316772B8A7355004D7715 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316762B8A7355004D7715 /* OnboardingViewModel.swift */; };
 		46B3167E2B8A7550004D7715 /* Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B3167D2B8A7550004D7715 /* Traits.swift */; };
 		46B316802B8A775E004D7715 /* CircleImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B3167F2B8A775E004D7715 /* CircleImageButton.swift */; };
 		46B316822B8A7869004D7715 /* PartOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316812B8A7869004D7715 /* PartOfDay.swift */; };
 		46B316842B8A7FA2004D7715 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316832B8A7FA2004D7715 /* UserDefaultsManager.swift */; };
 		46B316862B8A81D3004D7715 /* NavigationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316852B8A81D3004D7715 /* NavigationWrapper.swift */; };
+		46B316882B8A9777004D7715 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316872B8A9777004D7715 /* CheckInView.swift */; };
+		46B3168A2B8A99D1004D7715 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316892B8A99D1004D7715 /* CheckInViewModel.swift */; };
+		46B3168C2B8A9A79004D7715 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B3168B2B8A9A79004D7715 /* AppState.swift */; };
+		46B3168E2B8A9B75004D7715 /* CheckInReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B3168D2B8A9B75004D7715 /* CheckInReport.swift */; };
 		46F9F3F72B89B3CF00F524AC /* ipseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9F3F62B89B3CF00F524AC /* ipseApp.swift */; };
 		46F9F3F92B89B3CF00F524AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9F3F82B89B3CF00F524AC /* ContentView.swift */; };
 		46F9F3FB2B89B3D000F524AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F9F3FA2B89B3D000F524AC /* Assets.xcassets */; };
@@ -31,13 +34,16 @@
 		4600886E2B8A5368008E644A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		460088722B8A553E008E644A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		460088792B8A5BBF008E644A /* ReadexPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ReadexPro.ttf; path = ipse/ReadexPro.ttf; sourceTree = SOURCE_ROOT; };
-		46B316742B8A67A2004D7715 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		46B316762B8A7355004D7715 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		46B3167D2B8A7550004D7715 /* Traits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traits.swift; sourceTree = "<group>"; };
 		46B3167F2B8A775E004D7715 /* CircleImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageButton.swift; sourceTree = "<group>"; };
 		46B316812B8A7869004D7715 /* PartOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfDay.swift; sourceTree = "<group>"; };
 		46B316832B8A7FA2004D7715 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		46B316852B8A81D3004D7715 /* NavigationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWrapper.swift; sourceTree = "<group>"; };
+		46B316872B8A9777004D7715 /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
+		46B316892B8A99D1004D7715 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
+		46B3168B2B8A9A79004D7715 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		46B3168D2B8A9B75004D7715 /* CheckInReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInReport.swift; sourceTree = "<group>"; };
 		46F9F3F32B89B3CF00F524AC /* ipse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F9F3F62B89B3CF00F524AC /* ipseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipseApp.swift; sourceTree = "<group>"; };
 		46F9F3F82B89B3CF00F524AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 		460088672B8A4FF4008E644A /* CheckIn */ = {
 			isa = PBXGroup;
 			children = (
+				46B316872B8A9777004D7715 /* CheckInView.swift */,
+				46B316892B8A99D1004D7715 /* CheckInViewModel.swift */,
 			);
 			path = CheckIn;
 			sourceTree = "<group>";
@@ -93,7 +101,6 @@
 		46B316732B8A6793004D7715 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				46B316742B8A67A2004D7715 /* NavigationViewModel.swift */,
 				46B316852B8A81D3004D7715 /* NavigationWrapper.swift */,
 			);
 			path = Navigation;
@@ -112,6 +119,7 @@
 				46B3167D2B8A7550004D7715 /* Traits.swift */,
 				46B316812B8A7869004D7715 /* PartOfDay.swift */,
 				46B316832B8A7FA2004D7715 /* UserDefaultsManager.swift */,
+				46B3168D2B8A9B75004D7715 /* CheckInReport.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 				46B316732B8A6793004D7715 /* Navigation */,
 				460088662B8A4FE5008E644A /* Onboarding */,
 				46F9F3F62B89B3CF00F524AC /* ipseApp.swift */,
+				46B3168B2B8A9A79004D7715 /* AppState.swift */,
 				46F9F3F82B89B3CF00F524AC /* ContentView.swift */,
 				46F9F3FA2B89B3D000F524AC /* Assets.xcassets */,
 				46F9F3FF2B89B3D000F524AC /* Persistence.swift */,
@@ -223,8 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46B316752B8A67A2004D7715 /* NavigationViewModel.swift in Sources */,
 				46B316862B8A81D3004D7715 /* NavigationWrapper.swift in Sources */,
+				46B3168A2B8A99D1004D7715 /* CheckInViewModel.swift in Sources */,
+				46B316882B8A9777004D7715 /* CheckInView.swift in Sources */,
 				4600886D2B8A51EC008E644A /* TextLabelButton.swift in Sources */,
 				46F9F4002B89B3D000F524AC /* Persistence.swift in Sources */,
 				46B316842B8A7FA2004D7715 /* UserDefaultsManager.swift in Sources */,
@@ -233,6 +243,8 @@
 				46B316772B8A7355004D7715 /* OnboardingViewModel.swift in Sources */,
 				46B316802B8A775E004D7715 /* CircleImageButton.swift in Sources */,
 				46F9F4032B89B3D000F524AC /* ipse.xcdatamodeld in Sources */,
+				46B3168C2B8A9A79004D7715 /* AppState.swift in Sources */,
+				46B3168E2B8A9B75004D7715 /* CheckInReport.swift in Sources */,
 				4600886F2B8A5368008E644A /* Constants.swift in Sources */,
 				4600886B2B8A513F008E644A /* OnboardingView.swift in Sources */,
 				46B3167E2B8A7550004D7715 /* Traits.swift in Sources */,

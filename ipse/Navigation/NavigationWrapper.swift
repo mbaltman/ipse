@@ -3,14 +3,14 @@ import SwiftUI
 struct NavigationWrapper: View {
     @State private var selection: Int = 0
     // Assuming equal spacing and square size for simplicity
-    private let squareSize: CGFloat = 20
-    private let labels = ["1", "2", "3"]
-
+    private let squareSize: CGFloat = 100
+    private let segmentSize = 80.0
+    
     var body: some View {
         VStack(spacing: 0) {
             // Pages
             TabView(selection: $selection) {
-                Text("Page 1")
+                CheckInView()
                     .tag(0)
                 Text("Page 2")
                     .tag(1)
@@ -21,31 +21,59 @@ struct NavigationWrapper: View {
 
             // Custom Navigation Bar with Moving Square
             ZStack(alignment: .bottom) {
-                HStack {
-                    ForEach(0..<3) { index in
-                        Spacer()
-                        Text(labels[index])
-                            .font(.headline)
-                            .foregroundColor(selection == index ? .blue : .gray)
-                            .onTapGesture {
-                                withAnimation {
-                                    selection = index
-                                }
-                            }
-                        Spacer()
-                    }
-                }
-                .padding(.bottom, squareSize) // Make space for the moving square
-
                 // Moving Square
                 Rectangle()
-                    .fill(Color.blue)
+                    .fill(Color("ipseRed"))
+                    .cornerRadius(5)
                     .frame(width: squareSize, height: squareSize)
                     .offset(x: calculateOffset(), y: 0)
                     .animation(.easeInOut, value: selection)
+                
+                HStack() {
+                    Spacer()
+                    VStack
+                    {
+                        Image(systemName: "square.and.pencil")
+                            .font(Font.system(size: 40))
+                            .foregroundColor(Color("ipseWhite"))
+                        Text("CheckIn")
+                            .font(Constants.bodyFont)
+                            .foregroundStyle(Color("ipseBlack"))
+                    }
+                    .frame(width: segmentSize)
+                    Spacer()
+
+                    VStack
+                    {
+                        Image(systemName: "chart.xyaxis.line")
+                            .font(Font.system(size: 40))
+                            .foregroundColor(Color("ipseWhite"))
+                        Text("Data")
+                            .font(Constants.bodyFont)
+                            .foregroundStyle(Color("ipseBlack"))
+
+                    }
+                    .frame(width: segmentSize)
+                    Spacer()
+                    
+                    VStack
+                    {
+                        Image(systemName: "gearshape")
+                            .font(Font.system(size: 40))
+                            .foregroundColor(Color("ipseWhite"))
+                        Text("Settings")
+                            .font(Constants.bodyFont)
+                            .foregroundStyle(Color("ipseBlack"))
+                    }
+                    .frame(width: segmentSize)
+                    Spacer()
+
+                }
+                .padding(.bottom, 20)
+               
             }
-            .frame(height: 50) // Adjust the frame height as needed
-            .background(Color(.systemBackground))
+            .frame(width: UIScreen.main.bounds.width, height: 90) // Adjust the frame height as needed
+            .background(Color("ipseRed_secondary"))
             .edgesIgnoringSafeArea(.bottom)
         }
         .edgesIgnoringSafeArea(.all)
@@ -53,12 +81,20 @@ struct NavigationWrapper: View {
     
     // Calculate the offset for the square based on the current selection
     private func calculateOffset() -> CGFloat {
-        // Calculate the total width of the HStack
-        let totalWidth = UIScreen.main.bounds.width - 40 // Adjust based on padding
-        // Calculate the width per segment
-        let segmentWidth = totalWidth / CGFloat(labels.count)
-        // Calculate offset
-        return (CGFloat(selection) * segmentWidth) - (totalWidth / 2) + (segmentWidth / 2)
+        
+        let spacing = (UIScreen.main.bounds.width - segmentSize * 3 ) / 4
+
+        switch selection
+        {
+        case 0:
+            return -( spacing + segmentSize)
+        case 1:
+            return 0
+        case 2:
+            return (spacing + segmentSize)
+        default:
+            return 0
+        }
     }
 }
 

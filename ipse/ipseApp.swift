@@ -3,9 +3,8 @@ import SwiftUI
 @main
 struct ipseApp: App {
     let persistenceController = PersistenceController.shared
-
-    @State
-    var navigationViewModel = NavigationViewModel()
+    
+    let appState = AppState()
     
     var body: some Scene {
         WindowGroup {
@@ -16,13 +15,13 @@ struct ipseApp: App {
             {
                 OnboardingView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                    .environmentObject(navigationViewModel)
             }
             else
             {
                 NavigationWrapper()
+                    .environmentObject(appState)
+                    .onAppear(perform: appState.loadInReports)
             }
-          
         }
     }
 }
