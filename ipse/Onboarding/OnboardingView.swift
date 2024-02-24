@@ -27,7 +27,7 @@ struct OnboardingView: View {
             
             ContinueButton(action: {
                            // Define your continue button action here
-                       })
+                       }, width: 120, height: 40)
             Spacer() // Use a Spacer to push all content to the top
 
         }
