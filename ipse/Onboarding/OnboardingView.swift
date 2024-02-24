@@ -4,6 +4,9 @@ struct OnboardingView: View {
     @ObservedObject
     var viewModel = OnboardingViewModel()
     
+    @EnvironmentObject
+    var appState: AppState
+    
     var body: some View {
         ZStack {
             if viewModel.currentStep == 1 {
@@ -116,8 +119,6 @@ struct OnboardingView: View {
                             
                         }, width: 300, height: 30, title: trait.title)
                         .opacity(viewModel.selectedTraits.contains(trait) ? 1.0 : 0.5)
-
-                        
                     }
                 }
             }
@@ -127,6 +128,7 @@ struct OnboardingView: View {
                 if canContinue
                 {
                     viewModel.completeOnboarding()
+                    appState.checkIsOnboarded()
                 }
             }, width: 120, height: 50, title: "Continue")
             .opacity(canContinue ? 1.0 : 0.5)

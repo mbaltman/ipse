@@ -9,14 +9,20 @@ struct CheckInView: View {
     @EnvironmentObject
     var appState: AppState
     
+    
     var body: some View {
         ZStack {
             if viewModel.currentStep == 1 {
                 checkInStep1
-                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                    .transition( .opacity)
             } else if viewModel.currentStep == 2 {
                 checkInStep2
-                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                    .transition( .opacity)
+            }
+            else if viewModel.currentStep == 3
+            {
+                checkInStep3
+                    .transition( .opacity)
             }
         }
         .animation(.default, value: viewModel.currentStep)
@@ -63,12 +69,35 @@ struct CheckInView: View {
     }
     
     private var checkInStep2: some View {
-        
-        VStack
+        ScrollView(.vertical)
         {
-            
-            Text("Start Checkin ")
+            VStack
+            {
+                Spacer()
+
+                ForEach(viewModel.selectedTraits)
+                {
+                    trait in
+                    VStack
+                    {
+                        TextLabelButton(action: {}, width: 300, height: 30, title: trait.title)
+                        Battery()
+                    }
+                }
+                .padding(EdgeInsets(top: 0, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
+                let canContinue = true
+
+                TextLabelButton(action: {
+                        viewModel.goToNextStep()
+                }, width: 120, height: 50, title: "Continue")
+                .opacity(canContinue ? 1.0 : 0.5)
+            }
         }
         .padding(EdgeInsets(top: 0, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
     }
+    
+    private var checkInStep3: some View {
+        Text("GOAL")
+    }
+    
 }

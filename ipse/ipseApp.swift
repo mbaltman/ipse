@@ -4,23 +4,26 @@ import SwiftUI
 struct ipseApp: App {
     let persistenceController = PersistenceController.shared
     
-    let appState = AppState()
+    @ObservedObject
+    var appState = AppState()
     
     var body: some Scene {
         WindowGroup {
-            let traits = UserDefaultsManager.retrieveSelectedTraits()
-            let times = UserDefaultsManager.retrieveSelectedTimes()
-            
-            if times.isEmpty || traits.isEmpty
+          
+            if !appState.isOnboarded
             {
                 OnboardingView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    .environmentObject(appState)
+                    .transition( .opacity)
+                
             }
             else
             {
                 NavigationWrapper()
                     .environmentObject(appState)
                     .onAppear(perform: appState.loadInReports)
+                    .transition( .opacity)
             }
         }
     }
