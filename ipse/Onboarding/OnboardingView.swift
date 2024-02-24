@@ -1,20 +1,21 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @State private var currentStep = 1
-
+    @ObservedObject
+    var viewModel = OnboardingViewModel()
+    
     var body: some View {
         ZStack {
-            if currentStep == 1 {
+            if viewModel.currentStep == 1 {
                 onboardingStep1
                     .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
-            } else if currentStep == 2 {
+            } else if viewModel.currentStep == 2 {
                 onboardingStep2
                     // Adjusting the transition for step2 to ensure it comes from the right
                     .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
             }
         }
-        .animation(.default, value: currentStep)
+        .animation(.default, value: viewModel.currentStep)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("Background"))
         .edgesIgnoringSafeArea(.all)
@@ -41,7 +42,9 @@ struct OnboardingView: View {
                 .shadow(color: Color("ipseBlack"), radius: 0, x: 5, y: 5)
                 .padding()
             ContinueButton(action: {
-                self.goToNextStep()
+                withAnimation {
+                    self.viewModel.goToNextStep()
+                }
             }, width: 120, height: 40)
             Spacer()
         }
@@ -75,7 +78,6 @@ struct OnboardingView: View {
                 Text("tired vs energized")
                 Text("tired vs energized")
             }
-
             
             ContinueButton(action: {
             }, width: 120, height: 40)
@@ -88,12 +90,6 @@ struct OnboardingView: View {
         }
         .padding(EdgeInsets(top: 0, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
 
-    }
-
-    private func goToNextStep() {
-        withAnimation {
-            currentStep = 2 // Increment or set to specific value based on the flow
-        }
     }
 }
 

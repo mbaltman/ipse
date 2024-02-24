@@ -12,6 +12,7 @@
 		4600886F2B8A5368008E644A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600886E2B8A5368008E644A /* Constants.swift */; };
 		4600887B2B8A5BD2008E644A /* ReadexPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 460088792B8A5BBF008E644A /* ReadexPro.ttf */; };
 		46B316752B8A67A2004D7715 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316742B8A67A2004D7715 /* NavigationViewModel.swift */; };
+		46B316772B8A7355004D7715 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B316762B8A7355004D7715 /* OnboardingViewModel.swift */; };
 		46F9F3F72B89B3CF00F524AC /* ipseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9F3F62B89B3CF00F524AC /* ipseApp.swift */; };
 		46F9F3F92B89B3CF00F524AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9F3F82B89B3CF00F524AC /* ContentView.swift */; };
 		46F9F3FB2B89B3D000F524AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F9F3FA2B89B3D000F524AC /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		460088722B8A553E008E644A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		460088792B8A5BBF008E644A /* ReadexPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ReadexPro.ttf; path = ipse/ReadexPro.ttf; sourceTree = SOURCE_ROOT; };
 		46B316742B8A67A2004D7715 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		46B316762B8A7355004D7715 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		46F9F3F32B89B3CF00F524AC /* ipse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F9F3F62B89B3CF00F524AC /* ipseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipseApp.swift; sourceTree = "<group>"; };
 		46F9F3F82B89B3CF00F524AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				4600886A2B8A513F008E644A /* OnboardingView.swift */,
+				46B316762B8A7355004D7715 /* OnboardingViewModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				4600886D2B8A51EC008E644A /* ContinueButton.swift in Sources */,
 				46F9F4002B89B3D000F524AC /* Persistence.swift in Sources */,
 				46F9F3F92B89B3CF00F524AC /* ContentView.swift in Sources */,
+				46B316772B8A7355004D7715 /* OnboardingViewModel.swift in Sources */,
 				46F9F4032B89B3D000F524AC /* ipse.xcdatamodeld in Sources */,
 				4600886F2B8A5368008E644A /* Constants.swift in Sources */,
 				4600886B2B8A513F008E644A /* OnboardingView.swift in Sources */,
