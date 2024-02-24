@@ -1,9 +1,11 @@
 import SwiftUI
 
-struct ContinueButton: View {
+struct TextLabelButton: View {
     var action: () -> Void
     var width: CGFloat
     var height: CGFloat
+    var title: String
+    
     @State private var isPressed = false
 
     var body: some View {
@@ -11,7 +13,7 @@ struct ContinueButton: View {
         Button(action: {
             self.action()
         }) {
-            Text("Continue")
+            Text(title)
                 .font(Constants.bodyFont)
                 .foregroundColor(Color("ipseBlack"))
                 .padding()
