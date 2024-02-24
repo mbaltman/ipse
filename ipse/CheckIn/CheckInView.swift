@@ -81,19 +81,23 @@ struct CheckInView: View {
                     VStack
                     {
                         TextLabelButton(action: {}, width: 300, height: 30, title: trait.title)
-                        Battery()
+                        Battery(logValue: {value in viewModel.addLoggedTraitValue(forTrait: trait, value: value)})
                     }
                 }
                 .padding(EdgeInsets(top: 0, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
-                let canContinue = true
 
+                Spacer()
                 TextLabelButton(action: {
+                    if viewModel.didLogTraits
+                    {
                         viewModel.goToNextStep()
+                    }
                 }, width: 120, height: 50, title: "Continue")
-                .opacity(canContinue ? 1.0 : 0.5)
+                .opacity(viewModel.didLogTraits ? 1.0 : 0.5)
             }
         }
-        .padding(EdgeInsets(top: 0, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
+        .padding(EdgeInsets(top: 50, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
+        .frame(maxHeight: .infinity)
     }
     
     private var checkInStep3: some View {

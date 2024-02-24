@@ -1,5 +1,8 @@
-class Trait: Identifiable, Equatable, Codable
+class Trait: Identifiable, Equatable, Codable, Hashable
 {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.title)
+    }
     static func == (lhs: Trait, rhs: Trait) -> Bool {
         lhs.title == rhs.title
     }

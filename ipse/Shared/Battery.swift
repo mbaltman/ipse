@@ -8,8 +8,9 @@ struct Battery: View {
     static let padding: CGFloat = 22 // Horizontal padding
     static let totalWidth: CGFloat = CGFloat(increments) * segmentWidth + CGFloat(increments - 1) * spacing + 2 * padding
     
-    @State private var selectedValue: Int = 0
+    @State private var selectedValue: Int = -1
     
+    var logValue: (Int)-> Void
     var body: some View {
         
         HStack(alignment: .center, spacing: 0) {
@@ -45,6 +46,7 @@ struct Battery: View {
                         // Calculate the selected segment based on the drag position
                         let segment = max(0, min(totalSegments, Int(floor(position / (Battery.segmentWidth + Battery.spacing)))))
                         selectedValue = segment
+                        logValue(selectedValue)
                     }
             )
             
@@ -55,13 +57,6 @@ struct Battery: View {
         }
     }
 }
-
-struct Battery_Previews: PreviewProvider {
-    static var previews: some View {
-        Battery()
-    }
-}
-
     
     struct RoundedRightCornersShape: Shape {
         var radius: CGFloat
