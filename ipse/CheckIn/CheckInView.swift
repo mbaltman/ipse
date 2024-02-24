@@ -69,39 +69,46 @@ struct CheckInView: View {
     }
     
     private var checkInStep2: some View {
-        ScrollView(.vertical)
+        VStack
         {
-            VStack
+            ScrollView(.vertical)
             {
-                Spacer()
-
-                ForEach(viewModel.selectedTraits)
+                VStack
                 {
-                    trait in
-                    VStack
+                    ForEach(viewModel.selectedTraits)
                     {
-                        TextLabelButton(action: {}, width: 300, height: 30, title: trait.title)
-                        Battery(logValue: {value in viewModel.addLoggedTraitValue(forTrait: trait, value: value)})
+                        trait in
+                        VStack
+                        {
+                            TextLabelButton(action: {}, width: 300, height: 30, title: trait.title)
+                            Battery(logValue: {value in viewModel.addLoggedTraitValue(forTrait: trait, value: value)})
+                        }
                     }
+                   
                 }
-                .padding(EdgeInsets(top: 0, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
-
-                Spacer()
-                TextLabelButton(action: {
-                    if viewModel.didLogTraits
-                    {
-                        viewModel.goToNextStep()
-                    }
-                }, width: 120, height: 50, title: "Continue")
-                .opacity(viewModel.didLogTraits ? 1.0 : 0.5)
             }
+            .frame(maxHeight: .infinity)
+            TextLabelButton(action: {
+                if viewModel.didLogTraits
+                {
+                    viewModel.goToNextStep()
+                }
+            }, width: 120, height: 50, title: "Continue")
+            .opacity(viewModel.didLogTraits ? 1.0 : 0.5)
         }
-        .padding(EdgeInsets(top: 50, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
+        .padding(EdgeInsets(top: 80, leading: Constants.horizontalPadding, bottom: 50, trailing: Constants.horizontalPadding))
+
         .frame(maxHeight: .infinity)
     }
     
     private var checkInStep3: some View {
-        Text("GOAL")
+        VStack
+        {
+            Text("Nice Work! Check back in tomorrow morning!")
+                .font(Constants.titleFont)
+                .foregroundStyle(Color("ipseBlack"))
+        }
+        .frame(maxHeight: .infinity)
     }
-    
+
 }

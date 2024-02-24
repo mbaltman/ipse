@@ -38,5 +38,9 @@ class AppState: ObservableObject
         reports.append(CheckInReport(goal: "Go for a 20 min walk ", partOfDay: .afternoon, timeCreated: Date.now))
     }
     
+    func logNewReport(report: CheckInReport)
+    {
+        reports.append(report)
+    }
     
 }
