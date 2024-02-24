@@ -9,7 +9,7 @@ class Constants
     
     //font
     static let readexFont = "ReadexPro-Regular"
-    static let titleFont = Font.custom(Constants.readexFont, size: 26).bold()
+    static let titleFont = Font.custom(Constants.readexFont, size: 22).bold()
     static let bodyFont = Font.custom(Constants.readexFont, size: 17)
     static let subtitleFont = Font.custom(Constants.readexFont, size: 15).weight(.light)
 

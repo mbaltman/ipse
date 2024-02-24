@@ -2,8 +2,8 @@ import SwiftUI
 
 struct ContinueButton: View {
     var action: () -> Void
-    var width: CGFloat // Dynamic width
-    var height: CGFloat // Dynamic height
+    var width: CGFloat
+    var height: CGFloat
     @State private var isPressed = false
 
     var body: some View {
@@ -15,10 +15,10 @@ struct ContinueButton: View {
                 .font(Constants.bodyFont)
                 .foregroundColor(Color("ipseBlack"))
                 .padding()
-                .frame(width: width, height: height) // Use dynamic width and height
+                .frame(width: width, height: height)
                 .background(Color("ipseRed"))
                 .cornerRadius(Constants.buttonRounding)
-                .offset(x: isPressed ? 5 : 0, y: isPressed ? 5 : 0) // Only move the button content
+                .offset(x: isPressed ? 5 : 0, y: isPressed ? 5 : 0)
                 .animation(.easeOut(duration: 0.2), value: isPressed)
         }
         .background(
