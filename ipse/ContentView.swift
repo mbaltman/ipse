@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  ipse
-//
-//  Created by Maxwell Altman on 2/24/24.
-//
-
 import SwiftUI
 import CoreData
 
