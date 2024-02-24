@@ -1,4 +1,4 @@
-class PartOfDay: Identifiable, Equatable
+class PartOfDay: Identifiable, Equatable, Codable
 {
     static func == (lhs: PartOfDay, rhs: PartOfDay) -> Bool {
         lhs.title == rhs.title

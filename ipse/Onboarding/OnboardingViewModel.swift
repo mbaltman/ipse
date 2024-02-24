@@ -17,6 +17,7 @@ class OnboardingViewModel: ObservableObject
     
     func completeOnboarding()
     {
-        
+        UserDefaultsManager.saveSelectedTimes(selectedTimes)
+        UserDefaultsManager.saveSelectedTraits(selectedTraits)
     }
 }

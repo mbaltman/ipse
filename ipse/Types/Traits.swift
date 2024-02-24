@@ -1,4 +1,4 @@
-class Trait: Identifiable, Equatable
+class Trait: Identifiable, Equatable, Codable
 {
     static func == (lhs: Trait, rhs: Trait) -> Bool {
         lhs.title == rhs.title
@@ -16,4 +16,6 @@ class Trait: Identifiable, Equatable
     {
         self.title = title
     }
+    
+    
 }

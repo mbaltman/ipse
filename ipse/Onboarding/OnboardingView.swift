@@ -126,7 +126,7 @@ struct OnboardingView: View {
             TextLabelButton(action: {
                 if canContinue
                 {
-                    
+                    viewModel.completeOnboarding()
                 }
             }, width: 120, height: 50, title: "Continue")
             .opacity(canContinue ? 1.0 : 0.5)

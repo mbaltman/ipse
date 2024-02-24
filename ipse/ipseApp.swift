@@ -9,9 +9,20 @@ struct ipseApp: App {
     
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(navigationViewModel)
+            let traits = UserDefaultsManager.retrieveSelectedTraits()
+            let times = UserDefaultsManager.retrieveSelectedTimes()
+            
+            if times.isEmpty || traits.isEmpty
+            {
+                OnboardingView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    .environmentObject(navigationViewModel)
+            }
+            else
+            {
+                NavigationWrapper()
+            }
+          
         }
     }
 }
