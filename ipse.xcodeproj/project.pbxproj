@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4600886B2B8A513F008E644A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600886A2B8A513F008E644A /* OnboardingView.swift */; };
+		4600886D2B8A51EC008E644A /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600886C2B8A51EC008E644A /* ContinueButton.swift */; };
+		4600886F2B8A5368008E644A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600886E2B8A5368008E644A /* Constants.swift */; };
+		4600887B2B8A5BD2008E644A /* ReadexPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 460088792B8A5BBF008E644A /* ReadexPro.ttf */; };
 		46F9F3F72B89B3CF00F524AC /* ipseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9F3F62B89B3CF00F524AC /* ipseApp.swift */; };
 		46F9F3F92B89B3CF00F524AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9F3F82B89B3CF00F524AC /* ContentView.swift */; };
 		46F9F3FB2B89B3D000F524AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F9F3FA2B89B3D000F524AC /* Assets.xcassets */; };
@@ -16,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4600886A2B8A513F008E644A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		4600886C2B8A51EC008E644A /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
+		4600886E2B8A5368008E644A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		460088722B8A553E008E644A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		460088792B8A5BBF008E644A /* ReadexPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ReadexPro.ttf; path = ipse/ReadexPro.ttf; sourceTree = SOURCE_ROOT; };
 		46F9F3F32B89B3CF00F524AC /* ipse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F9F3F62B89B3CF00F524AC /* ipseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipseApp.swift; sourceTree = "<group>"; };
 		46F9F3F82B89B3CF00F524AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +45,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		460088662B8A4FE5008E644A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4600886A2B8A513F008E644A /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		460088672B8A4FF4008E644A /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
+		460088682B8A5003008E644A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		460088692B8A5012008E644A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4600886C2B8A51EC008E644A /* ContinueButton.swift */,
+				4600886E2B8A5368008E644A /* Constants.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		46F9F3EA2B89B3CF00F524AC = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +95,12 @@
 		46F9F3F52B89B3CF00F524AC /* ipse */ = {
 			isa = PBXGroup;
 			children = (
+				460088792B8A5BBF008E644A /* ReadexPro.ttf */,
+				460088722B8A553E008E644A /* Info.plist */,
+				460088692B8A5012008E644A /* Shared */,
+				460088682B8A5003008E644A /* Data */,
+				460088672B8A4FF4008E644A /* CheckIn */,
+				460088662B8A4FE5008E644A /* Onboarding */,
 				46F9F3F62B89B3CF00F524AC /* ipseApp.swift */,
 				46F9F3F82B89B3CF00F524AC /* ContentView.swift */,
 				46F9F3FA2B89B3D000F524AC /* Assets.xcassets */,
@@ -131,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4600887B2B8A5BD2008E644A /* ReadexPro.ttf in Resources */,
 				46F9F3FE2B89B3D000F524AC /* Preview Assets.xcassets in Resources */,
 				46F9F3FB2B89B3D000F524AC /* Assets.xcassets in Resources */,
 			);
@@ -143,9 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4600886D2B8A51EC008E644A /* ContinueButton.swift in Sources */,
 				46F9F4002B89B3D000F524AC /* Persistence.swift in Sources */,
 				46F9F3F92B89B3CF00F524AC /* ContentView.swift in Sources */,
 				46F9F4032B89B3D000F524AC /* ipse.xcdatamodeld in Sources */,
+				4600886F2B8A5368008E644A /* Constants.swift in Sources */,
+				4600886B2B8A513F008E644A /* OnboardingView.swift in Sources */,
 				46F9F3F72B89B3CF00F524AC /* ipseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,11 +333,12 @@
 				DEVELOPMENT_TEAM = 9ZZ8U8FYRY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ipse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,11 +363,12 @@
 				DEVELOPMENT_TEAM = 9ZZ8U8FYRY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ipse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
