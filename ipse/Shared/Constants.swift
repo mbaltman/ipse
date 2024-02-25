@@ -3,6 +3,7 @@ class Constants
 {
     //spacing
     static let horizontalPadding = 34.0
+    static let buttonHeight = 40.0
     //rounding
     static let buttonRounding = 20.0
     static let textFieldRounding = 10.0

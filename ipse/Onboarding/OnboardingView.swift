@@ -47,7 +47,8 @@ struct OnboardingView: View {
                 withAnimation {
                     self.viewModel.goToNextStep()
                 }
-            }, width: 120, height: 50, title: "Continue")
+            }, title: "Continue")
+            .frame(minWidth: 120, minHeight: 50)
             Spacer()
         }
         .padding(EdgeInsets(top: 0, leading: Constants.horizontalPadding, bottom: 0, trailing: Constants.horizontalPadding))
@@ -117,7 +118,8 @@ struct OnboardingView: View {
                                 }
                             }
                             
-                        }, width: 300, height: 30, title: trait.title)
+                        }, title: trait.title)
+                        .frame(minWidth: 300, minHeight: 30)
                         .opacity(viewModel.selectedTraits.contains(trait) ? 1.0 : 0.5)
                     }
                 }
@@ -130,7 +132,8 @@ struct OnboardingView: View {
                     viewModel.completeOnboarding()
                     appState.checkIsOnboarded()
                 }
-            }, width: 120, height: 50, title: "Continue")
+            }, title: "Continue")
+            .frame(minWidth: 120, minHeight: 50)
             .opacity(canContinue ? 1.0 : 0.5)
             
             Text("these options can always be edited later via the settings menu")

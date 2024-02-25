@@ -41,6 +41,9 @@ struct NavigationWrapper: View {
                             .foregroundStyle(Color("ipseBlack"))
                     }
                     .frame(width: segmentSize)
+                    .onTapGesture {
+                        selection = 0
+                    }
                     Spacer()
 
                     VStack
@@ -54,6 +57,9 @@ struct NavigationWrapper: View {
 
                     }
                     .frame(width: segmentSize)
+                    .onTapGesture {
+                        selection = 1
+                    }
                     Spacer()
                     
                     VStack
@@ -66,6 +72,9 @@ struct NavigationWrapper: View {
                             .foregroundStyle(Color("ipseBlack"))
                     }
                     .frame(width: segmentSize)
+                    .onTapGesture {
+                        selection = 2
+                    }
                     Spacer()
 
                 }

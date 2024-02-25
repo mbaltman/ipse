@@ -3,10 +3,9 @@ import SwiftUI
 struct Battery: View {
     
     static let increments = 10
-    static let segmentWidth: CGFloat = 24 // Width of one segment
+    static let segmentWidth: CGFloat = 20 // Width of one segment
     static let spacing: CGFloat = 5 // Spacing between segments
     static let padding: CGFloat = 22 // Horizontal padding
-    static let totalWidth: CGFloat = CGFloat(increments) * segmentWidth + CGFloat(increments - 1) * spacing + 2 * padding
     
     @State private var selectedValue: Int = -1
     
@@ -22,17 +21,19 @@ struct Battery: View {
                     {
                         Rectangle()
                             .fill(Color(highlighted ? "ipseRed" : "ipseRed_secondary")) // Use your color names
-                            .frame(width: Battery.segmentWidth, height: 72)
+                            .frame( height: 72)
+                            .frame(maxWidth: .infinity)
                             .cornerRadius(5)
                         Rectangle()
                             .fill(Color(highlighted ? "ipseGreen" : "ipseRed_secondary")) // Use your color names
-                            .frame(width: Battery.segmentWidth, height: 72)
+                            .frame( height: 72)
+                            .frame(maxWidth: .infinity)
                             .opacity(Double(index) * 0.1)
                             .cornerRadius(5)
                     }
-                  
                 }
             }
+            .frame(maxWidth: .infinity)
             .padding(EdgeInsets(top: 15, leading: Battery.padding, bottom: 15, trailing: Battery.padding))
             .background(Color("ipseBlack")) // Use your color name
             .cornerRadius(10)

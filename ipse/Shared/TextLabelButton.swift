@@ -2,8 +2,6 @@ import SwiftUI
 
 struct TextLabelButton: View {
     var action: () -> Void
-    var width: CGFloat
-    var height: CGFloat
     var title: String
     
     @State private var isPressed = false
@@ -16,8 +14,7 @@ struct TextLabelButton: View {
             Text(title)
                 .font(Constants.bodyFont)
                 .foregroundColor(Color("ipseBlack"))
-                .padding()
-                .frame(width: width, height: height)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color("ipseRed"))
                 .cornerRadius(Constants.buttonRounding)
                 .offset(x: isPressed ? 5 : 0, y: isPressed ? 5 : 0)

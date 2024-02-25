@@ -52,7 +52,8 @@ struct CheckInView: View {
                         withAnimation {
                             viewModel.goToNextStep()
                         }
-                    }, width: 300, height: 50, title: "Complete \(currentPartOfDay.title) check in")
+                    }, title: "Complete \(currentPartOfDay.title) check in")
+                    .frame(width: 300, height: Constants.buttonHeight)
                 }
             }
             else
@@ -73,19 +74,21 @@ struct CheckInView: View {
         {
             ScrollView(.vertical)
             {
-                VStack
+                VStack(spacing: 15)
                 {
                     ForEach(viewModel.selectedTraits)
                     {
                         trait in
-                        VStack
+                        VStack(spacing: 10)
                         {
-                            TextLabelButton(action: {}, width: 300, height: 30, title: trait.title)
+                            TextLabelButton(action: {}, title: trait.title)
+                                .frame(maxWidth: .infinity, minHeight: Constants.buttonHeight, maxHeight: Constants.buttonHeight)
                             Battery(logValue: {value in viewModel.addLoggedTraitValue(forTrait: trait, value: value)})
                         }
+                        
                     }
-                   
                 }
+                .padding(EdgeInsets(top: 50, leading: Constants.horizontalPadding, bottom: 50, trailing: Constants.horizontalPadding))
             }
             .frame(maxHeight: .infinity)
             TextLabelButton(action: {
@@ -93,10 +96,11 @@ struct CheckInView: View {
                 {
                     viewModel.goToNextStep()
                 }
-            }, width: 120, height: 50, title: "Continue")
+            }, title: "Continue")
+            .frame(maxWidth: 120, minHeight: Constants.buttonHeight, maxHeight: Constants.buttonHeight)
             .opacity(viewModel.didLogTraits ? 1.0 : 0.5)
         }
-        .padding(EdgeInsets(top: 80, leading: Constants.horizontalPadding, bottom: 50, trailing: Constants.horizontalPadding))
+        .padding(EdgeInsets(top: 80, leading: 0, bottom: 50, trailing: 0))
 
         .frame(maxHeight: .infinity)
     }
